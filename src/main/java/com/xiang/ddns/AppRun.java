@@ -10,7 +10,7 @@ public class AppRun {
 	public static void main(String[] args) {
 		System.out.println("开始ddns检查");
 		UpdateDomainRecord record = new UpdateDomainRecord();
-		record.analysisDns();
+		record.myAnalysisDns();
 		System.out.println("ddns运行结束");
 	}
 
