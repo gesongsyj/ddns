@@ -16,7 +16,7 @@ public class AppRun {
 			public void run() {
 				ddns();
 			}
-		}, 1000,10000);
+		}, 1000,30000);
 	}
 
 	public static void ddns(){

@@ -37,17 +37,17 @@ public class UpdateDomainRecord {
      * 解析DNS信息
      */
     public void analysisDns() {
-        // 获取公网ip
-        LocalPublicIpv4 ip = new LocalPublicIpv4();
-        String ipV4 = ip.publicip();
-        // 获取解析的数据
-        String actionName = "DescribeDomainRecords";
-        DescribeDomainRecordsResponse response;
-        // 获取request
-        DescribeDomainRecordsRequest request = AliDdnsUtils.getRequestQuery(actionName);
-        // 设置request参数
-        setParam(request);
         try {
+            // 获取公网ip
+            LocalPublicIpv4 ip = new LocalPublicIpv4();
+            String ipV4 = ip.publicip();
+            // 获取解析的数据
+            String actionName = "DescribeDomainRecords";
+            DescribeDomainRecordsResponse response;
+            // 获取request
+            DescribeDomainRecordsRequest request = AliDdnsUtils.getRequestQuery(actionName);
+            // 设置request参数
+            setParam(request);
             response = AliDdnsUtils.getClient().getAcsResponse(request);
             // 声明解析对象
             DemoListDomains demo = new DemoListDomains();
